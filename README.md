@@ -1,5 +1,4 @@
-Followed the Acceptance Criteria 
-Incoporated the Media queries - four different max-widths
+Followed the Acceptance Criteria; Incoporated the Media queries - four different max-widths
 
 
 

@@ -86,6 +86,24 @@ header .container p i {
       border-bottom: 3px solid rgb(4, 215, 215);
     
   }
+/* About Me */
+
+.about-me {
+    margin: 20 px;
+}
+.about-me .container {
+    display:flex;
+}
+.about-me .container .about-me-l {
+    flex: 1; 
+}
+.about-me .container .about-me-r {
+ flex: 3;
+}
+.about.me .container .about-me-r p {
+ width: 90%;
+
+}
 
 /* hero */
 .hero{

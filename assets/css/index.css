@@ -1,7 +1,36 @@
-/* *{ */
+*/
     margin: 0;
     padding: 0;
-/* } */
+    box-sizing: border-box;
+a {
+    text-decoration: none;
+    color:rgb(205, 237, 241);
+}
+a:hover {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.items-title {
+    font-size: 24px;
+    font-weight:bolder;
+    color:rgb(186, 240, 240);
+    border-bottom: 3px solid silver
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio */ 
 
 body{
     margin: 0 auto;
@@ -9,7 +38,7 @@ body{
 
 /* header */
 header{
-    background-color: red;
+    background-color: rgb(205, 237, 241);
     height: 100px;
 }
 header .container {
@@ -21,17 +50,43 @@ header .container p {
     font-weight: unset;
     margin-left: 15 px;
     line-height: 80px;
-    color: mediumaquamarine;
+    color: rgb(207, 197, 7);
     height: 60px; 
 }
 header .container p i {
-    color: darkblue
+    color: rgb(23, 23, 246)
 }
  header .container nav {
      flex: 1; 
      z-index: 99;
  }
- 
+ header .container nav ul {
+     margin-top: 35px;
+     display: flex;
+ }
+
+ header .container nav ul li {
+     flex: 1;
+     margin-right: 20px;
+     font-size: 24px;
+     line-height: 45px;
+     width: 125px; 
+     height: 100%; 
+     text-align: center;
+     font-weight: bolder;
+     letter-spacing: 1px;
+ }
+ header .container nav ul li a {
+    display: inline-block;
+    width: 100%;
+    color: rgb(135, 209, 255);
+
+ }
+  header .container nav ul li a:hover {
+      border-bottom: 3px solid rgb(4, 215, 215);
+    
+  }
+
 /* hero */
 .hero{
     background-color: green;

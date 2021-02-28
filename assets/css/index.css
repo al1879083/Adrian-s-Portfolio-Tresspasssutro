@@ -22,7 +22,7 @@ ul, ol {
 .items-title {
     font-size: 24px;
     font-weight: bolder;
-    color: rgb(186, 240, 240);
+    color: rgb(23, 23, 246);
     border-bottom: 3px solid silver;
 }
 .about-me-l, 
@@ -48,9 +48,9 @@ header .container {
 header .container p {
     flex: 1; 
     font-size: 70px;
-    font-weight: unset;
+    /*font-weight: unset;?*/
     margin-left: 15 px;
-    line-height: 80px;
+    /*line-height: 80px;*/
     color: rgb(207, 197, 7);
     height: 60px; 
 }
@@ -80,7 +80,7 @@ header .container p i {
  header .container nav ul li a {
     display: inline-block;
     width: 100%;
-    color: rgb(135, 209, 255);
+    color: rgb(23, 23, 246);
 
  }
   header .container nav ul li a:hover {
@@ -107,11 +107,17 @@ header .container p i {
     color:rgb(190, 229, 245);
     font-size: 80px;
     font-weight:bolder;
-    font-style: italic;
+    font-style:normal;
     position: absolute;
     bottom: 30px;
     right: 100px;
     text-shadow:rgb(186, 240, 240) 3px 3px 6px;
+}
+.portrait .container .subtitle p {
+    color: rgb(207, 197, 7);
+    font-family: monospace;
+    font-weight:lighter;
+    stroke-opacity:inherit;
 }
 /* About Me */
 
@@ -128,11 +134,14 @@ header .container p i {
  flex: 3;
 }
 .about-me .container .about-me-r p {
- width: 90%;
+ width: 99%;
  font-size: 20px;
+ /*word-spacing: 10mm;*/
 
 }
+
 /* projects */
+
 .project {
     margin: 20px;
 }
@@ -182,7 +191,7 @@ header .container p i {
     opacity: 0.8;
 }
 .project .container .project-right .project-top .project-top-title p {
-    color:rgb(4, 215, 215);
+    color:rgb(215, 4, 127);
     font-size: 24px;
     font-weight: bolder;
 }
@@ -234,7 +243,9 @@ header .container p i {
     filter: blur(0);
     opacity: 1;
 }
+
 /* Footer */
+
 footer {
     margin: 20px;
 }
@@ -267,6 +278,8 @@ footer .container .contact-r ul li a {
     display: inline-block;
     border-bottom: 3px solid rgb(4, 215, 215);
 }
+/* Media */
+
 @media screen and (max-width: 992px) {
     .container {
         width: 100%; 
@@ -301,7 +314,7 @@ footer .container .contact-r ul li a {
     header .container nav ul li {
         margin: 5px;
         height: 50px;
-        background-color: rgb(23, 23, 246);
+        background-color: rgb(207, 197, 7);
         border-radius: 10px;
     }
     .portrait .container .subtitle p {
@@ -311,5 +324,100 @@ footer .container .contact-r ul li a {
         width: 85%;
         margin: 0 auto;
     }
-    
+    #About .about-me-r p {
+        width: 100%;  
+    }
 }
+    @media screen and (max-width: 768px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+             }
+
+        .container .about-me-l,
+        .container .project-left, 
+        .container .contact-left {
+            margin: 0 auto;
+        }
+        .container .project-right {
+            margin: 0 auto;
+        }
+        header .container .name-logo {
+            font-size: 30px;
+            line-height: 50px;
+            color:rgb(135, 209, 255);
+            height: 70px; 
+            margin: 0 auto;
+        }
+        header .container nav ul li {
+            margin: 2px auto;
+            height: 50px;
+            width: 75%;
+            background-color: rgb(23, 23, 246);
+            border-radius: 10px;
+        }
+        .work .container .work-right .work-top {
+            max-height: 280px;
+        }
+        .work .container .project-right .project-items {
+            min-width: 90%;
+            max-height: 280px;
+        }
+        .portrait .container .subtitle p {
+            font-size: 56px; 
+        }
+        #About .about-me-r {
+            width: 85%;
+            margin: 0 auto;
+        }
+        footer .container .contact-right ul {
+            flex-direction: column;
+        }
+}
+@media screen and (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    header .container .name-logo {
+        font-size: 30px;
+        line-height: 50px;
+        color:rgb(23, 23, 246);
+        height: 70px;
+        margin: 0 auto;
+    }
+    header .container nav ul {
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    header .container nav ul li {
+        flex: 85%; 
+        height: 50px;
+        background-color: rgb(23, 23, 246);
+        border-radius: 10px;
+    }
+    .project .container .project-right .project-top {
+        max-height: 280px;
+    }
+    .project .container .project-right .project-items {
+        min-width: 90%;
+        max-height: 180px;
+    }
+    .portrait .container .subtitles p {
+        font-size: 54px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .project .container .project-right .project-top {
+        max-height: 240px;
+    }
+    .project .container .project-right .project-items {
+        min-width: 90%;
+        max-height: 140px;
+    }
+    .portrait .container .subtitle p {
+        font-size: 50px;
+    }
+}
+

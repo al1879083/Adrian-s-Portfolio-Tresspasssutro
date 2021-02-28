@@ -1,7 +1,8 @@
-*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 a {
     text-decoration: none;
     color:rgb(205, 237, 241);
@@ -20,23 +21,23 @@ ul, ol {
 }
 .items-title {
     font-size: 24px;
-    font-weight:bolder;
-    color:rgb(186, 240, 240);
-    border-bottom: 3px solid silver
+    font-weight: bolder;
+    color: rgb(186, 240, 240);
+    border-bottom: 3px solid silver;
 }
-
+.about-me-l, 
+.project-left, 
+.contact-left {
+    margin-right: 50px;
+    margin-top: 10px;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Portfolio */ 
-
-body{
-    margin: 0 auto;
-}
-
 /* header */
+
 header{
     background-color: rgb(205, 237, 241);
     height: 100px;
@@ -86,6 +87,32 @@ header .container p i {
       border-bottom: 3px solid rgb(4, 215, 215);
     
   }
+  /* self-portrait */
+.portrait {
+    width: 100%;
+    background-color: rgb(183, 221, 237);
+}
+
+.portrait .container {
+    height: 500px;
+    background: url("../images/Screen\ Shot\ 2021-02-28\ at\ 1.45.55\ AM.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.portrait .container .subtitle {
+    z-index: 99;
+    display: inline-block;
+    color:rgb(190, 229, 245);
+    font-size: 80px;
+    font-weight:bolder;
+    font-style: italic;
+    position: absolute;
+    bottom: 30px;
+    right: 100px;
+    text-shadow:rgb(186, 240, 240) 3px 3px 6px;
+}
 /* About Me */
 
 .about-me {
@@ -100,28 +127,189 @@ header .container p i {
 .about-me .container .about-me-r {
  flex: 3;
 }
-.about.me .container .about-me-r p {
+.about-me .container .about-me-r p {
  width: 90%;
+ font-size: 20px;
 
 }
-
-/* hero */
-.hero{
-    background-color: green;
+/* projects */
+.project {
+    margin: 20px;
 }
-
-.hero .hero-cta img{
-    width: 25%;
+.project .container {
+    display: flex;
 }
-/* portfolio */
-#Portfolio{
-background-color: blue;
+.project .container .project-left {
+    flex: 1;
 }
-/* About Me */
-#about-me{
-    background-color: orange;
+.project .container .project-right {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
 }
-/* Contact Info */
-#contact-info{
-background-color: grey;
+.project .container .project-right .project-top {
+    height: 360px;
+    margin: 5px;
+    background-color: rgb(4, 215, 215);
+    border: 6px solid rgb(4, 215, 215);
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+.project .container .project-right .project-top a {
+    filter: blur (5px);
+    opacity: 0.7;
+}
+.project .container .project-right .project-top a img {
+    width:100%;
+}
+.project .container .project-right .project-top a:hover {
+    filter: blur(0);
+    opacity: 1;
+}
+.project .container .project-right .project-top .project-top-title {
+    padding: 10px 50px 10px 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background-color: rgb(4, 215, 215);
+    display: inline-block;
+    z-index: 99;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    box-shadow: 1px 2px 5px rgb(0, 0, 0);
+    opacity: 0.8;
+}
+.project .container .project-right .project-top .project-top-title p {
+    color:rgb(4, 215, 215);
+    font-size: 24px;
+    font-weight: bolder;
+}
+.project .container .project-right .project-top .project-top-title p:last-child {
+    font-size: 18px;
+    font-weight: normal;
+}
+.project .container .project-right .project-items {
+    flex: 45%;
+    margin: 5px;
+    width: 45%;
+    height: 220px;
+    background-color:rgb(4, 215, 215);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px solid rgb(4, 215, 215);
+    position: relative;
+}
+.project .container .project-right .project-items .project-items-title {
+    opacity: 0.8;
+    padding: 10px 40px 10px 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    background-color:rgb(23, 23, 246);
+    display: inline-block;
+    z-index: 99;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 2px 3px rgb(4, 215, 215);
+}
+.project .container .project-right .project-items .project-items-title p {
+    color: rgb(215, 117, 4);
+    font-size: 20px;
+    font-weight: bolder;
+}
+.project .container .project-right .project-items .project-items-title p:last-child {
+    font-size: 14px;
+    font-weight: normal;
+}
+.project .container .project-right .project-items a {
+    filter: blur (3px);
+    opacity: 0.7;
+}
+.project .container .project-right .project-items a img {
+    width: 101%;
+}
+.project .container .project-right .project-items a:hover {
+    filter: blur(0);
+    opacity: 1;
+}
+/* Footer */
+footer {
+    margin: 20px;
+}
+footer .container {
+    display:flex;
+}
+footer .container .contact-l {
+    flex: 1;
+}
+footer .container .contact-r {
+    flex: 3;
+    height: 100px;
+}
+footer .container .contact-r ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer .container .contact-right ul li {
+    color:rgb(207, 197, 7); 
+    margin-right: 20px;
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: bolder;
+}
+footer .container .contact-r ul li a {
+    flex: 1;
+    color:rgb(23, 23, 246);
+    display: inline-block;
+    border-bottom: 3px solid rgb(4, 215, 215);
+}
+@media screen and (max-width: 992px) {
+    .container {
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+    }
+    .container .about-me-l, 
+    .container .project-left,
+    .container .contact-left {
+        margin: 20px auto;
+    }
+    .container .about-me-l span,
+    .container .project-left span,
+    .container .contact-left span {
+        font-size: 42px;
+    }
+    .container .project-right {
+        margin: 0 auto;
+    }
+    header .container {
+        background: url("../images/Screen\ Shot\ 2021-02-28\ at\ 1.45.55\ AM.png") no-repeat center top;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    header .container .name-logo {
+        font-size: 36px;
+        line-height: 80px;
+    }
+    header .container nav ul {
+        margin-top: 10px;
+    }
+    header .container nav ul li {
+        margin: 5px;
+        height: 50px;
+        background-color: rgb(23, 23, 246);
+        border-radius: 10px;
+    }
+    .portrait .container .subtitle p {
+        font-size: 60px;
+    }
+    #About .about-me-r {
+        width: 85%;
+        margin: 0 auto;
+    }
+    
 }
